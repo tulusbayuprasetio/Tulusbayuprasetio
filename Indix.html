@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Tulus Bayu Prasetio</title>
+    <style>
+        /* Variabel Warna */
+        :root {
+            --dark-blue: #0A192F; /* Biru Tua Profesional */
+            --neon-blue: #00FFFF; /* Biru Neon/Elektrik Futuristik */
+            --light-grey: #CCD6F6; /* Teks Utama */
+            --accent-color: #64FFDA; /* Aksen Hijau Neon */
+        }
+
+        /* Gaya Dasar */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-blue);
+            color: var(--light-grey);
+            overflow-x: hidden; /* Mencegah scroll horizontal */
+            position: relative;
+        }
+
+        /* Animasi Background Futuristik (Opsional: tambahkan elemen latar belakang untuk efek lebih) */
+        .background-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            /* Garis Grid Sederhana */
+            background-image: linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px), 
+                              linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveGrid 30s linear infinite;
+            opacity: 0.2;
+        }
+
+        @keyframes moveGrid {
+            from { background-position: 0 0; }
+            to { background-position: 50px 50px; }
+        }
+
+        /* Header / Konten Utama */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Foto Profil */
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--dark-blue);
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Animasi Bingkai Lingkaran Berwarna */
+        .circular-border {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            padding: 5px;
+            background: conic-gradient(from 0deg, 
+                #FF0000, /* Merah */
+                #FF7F00, /* Jingga */
+                #FFFF00, /* Kuning */
+                #00FF00, /* Hijau */
+                #0000FF, /* Biru */
+                #4B0082, /* Nila */
+                #9400D3, /* Ungu */
+                #FF0000 /* Kembali ke Merah */
+            );
+            animation: rotateBorder 5s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rotateBorder {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            color: var(--neon-blue);
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.2em;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        
+        /* Section Skills */
+        .skills-section {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .skills-section h3 {
+            color: var(--neon-blue);
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill-item {
+            background-color: rgba(100, 255, 218, 0.1); /* Latar belakang skill item */
+            color: var(--accent-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--accent-color);
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+        }
+        
+        .hero-item {
+        text-decoration:none;
+            background-color: rgba(100, 255, 218, 0.1); /* Latar belakang skill item */
+            color: var(--accent-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--accent-color);
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .hero-item:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+        }
+        
+        
+
+        /* Sosial Media */
+
+        
+        
+        .social-links {
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: var(--light-grey);
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--neon-blue);
+            transform: scale(1.1);
+        }
+        
+        /* Font Icons Sederhana (Menggunakan Unicode atau teks saja karena ini 1 file) */
+        /* Dalam project nyata, disarankan menggunakan Font Awesome/ikon SVG */
+        .icon {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-effect"></div>
+
+    <div class="container">
+        <div class="profile-container">
+            <div class="circular-border"></div>
+            <img src="tulus_2.png" alt="Foto Tulus Bayu Prasetio" class="profile-pic">
+        </div>
+
+        <h1>Tulus Bayu Prasetio</h1>
+        <h2><span class="icon">💻</span> Web Developer</h2>
+        <a
+        li class="hero-item" href="proyek.html">PROJECT PORTOFOLIO</li>
+        </a>
+        
+        <p> hallo saya adalah seorang Web Developer profesional dengan menghadirkan inovasi melalui teknologi web. Setiap proyek adalah peluang untuk menciptakan sesuatu yang lebih cepat, lebih cerdas, dan lebih menarik dan efisien .
+</p>
+
+        <section class="skills-section">
+            <h3>Keahlian (Skills)</h3>
+            <ul class="skills-list">
+                <li class="skill-item">HTML5 & CSS3</li>
+                <li class="skill-item">JavaScript (ES6+)</li>
+                <li class="skill-item">React / Vue.js</li>
+                <li class="skill-item">Node.js / Express.js</li>
+                <li class="skill-item">Responsive Design (Mobile-First)</li>
+                <li class="skill-item">Git & GitHub</li>
+                <li class="skill-item">Database (SQL / MongoDB)</li>
+                <li class="skill-item">Pengujian Unit (Unit Testing)</li>
+            </ul>
+        </section>
+
+        <section class="social-links">
+          
+          <h3> Hubungi saya sekarang untuk konsultasi gratis dan wujudkan website impian Anda dengan desain menarik dan performa optimal.
+</h3>
+            <h2>Contact me</h2>
+            <a class="Contact" href="#" target="_blank" title="TikTok"><span class="icon">🎵</span> TikTok</a>
+
+            <a class="Contact"href="https://www.facebook.com/share/1CpfGhbqLZ/" target="_blank" title="Facebook"><span class="icon">👍</span> Facebook</a>
+            
+            <a class="Contact"href=" https://github.com/tulusbayuprasetio" target="_blank" title="GitHub"><span class="icon">🐙</span> GitHub</a>
+            
+            <a  class="Contact"
+            
+            href="https://wa.me/+6285180636584" target="_blank" title="WhatsApp"><span class="icon"></span> WhatsApp</a>
+        </section>
+
+    </div>
+
+</body>
+</html>

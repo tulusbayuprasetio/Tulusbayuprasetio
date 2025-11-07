@@ -1,0 +1,134 @@
+        /* Variabel Warna */
+        :root {
+            --dark-blue: #0A192F; /* Biru Tua Profesional */
+            --neon-blue: #00FFFF; /* Biru Neon/Elektrik Futuristik */
+            --light-grey: #CCD6F6; /* Teks Utama */
+            --accent-color: #64FFDA; /* Aksen Hijau Neon */
+        }
+
+        /* Gaya Dasar */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-blue);
+            color: var(--light-grey);
+            overflow-x: hidden; /* Mencegah scroll horizontal */
+            position: relative;
+        }
+
+        /* Animasi Background Futuristik (Opsional: tambahkan elemen latar belakang untuk efek lebih) */
+        .background-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            /* Garis Grid Sederhana */
+            background-image: linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px), 
+                              linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveGrid 30s linear infinite;
+            opacity: 0.2;
+        }
+
+        @keyframes moveGrid {
+            from { background-position: 0 0; }
+            to { background-position: 50px 50px; }
+        }
+
+
+
+
+
+/* Projects Section */
+body{
+  
+
+}
+
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+   
+}
+.project{
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 1px 1px 60px  black;
+  height: 95%;
+  border-radius: 5px;
+  
+}
+.project img {
+    width: 100%;
+    height: 200px; /* Tentukan tinggi agar semua gambar seimbang */
+    object-fit: cover; /* Gambar akan terpotong jika perlu untuk menjaga aspek rasio */
+    border-radius: 5px;
+}
+
+.project h3 {
+  color: white;
+    text-align: center;
+    font-size: 20px;
+   background-color: black;
+}
+
+.project :hover{
+  background-color:rebeccapurple;
+
+}
+
+
+.her-item {
+  color: whitesmoke;
+box-shadow: 1px 1px 30px black;
+  text-align: center;
+  background-color: transparent;
+}
+
+
+
+.hero-item {
+  color: whitesmoke;
+box-shadow: 1px 1px 30px black;
+  text-align: center;
+  background-color: transparent;
+}
+
+        .hero-item {
+          
+        text-decoration:none;
+            background-color: rgba(100, 255, 218, 0.1); /* Latar belakang skill item */
+            
+            padding: 2px 40px;
+            border-radius: 5px;
+            border: 1px solid var(--accent-color);
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .hero-item:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 2px 15px rgba(100, 255, 218, 0.4);
+        }
+        
+        
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    
+    color: #fff;
+    box-shadow: 1px 1px 30px black;
+}
